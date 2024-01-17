@@ -1,0 +1,22 @@
+<!-- app/views/expenses/index.html.erb -->
+<div class="w-100">
+  <% if notice.present? %>
+    <p class="alert alert-success mb-3" id="notice"><%= notice %></p>
+  <% end %>
+
+  <div class="d-flex justify-content-between align-items-center">
+    <h1 class="font-weight-bold display-4">Expenses</h1>
+    <%= link_to "New expense", new_user_expense_path(current_user), class: "btn btn-primary" %>
+  </div>
+  <%= @expenses.inspect %>
+  <div id="expenses" class="w-100">
+    <% @expenses.each do |expense| %>
+      <h2><%= expense.name %>: <%= expense.amount %></h2>
+      <% expense.categories.each do |category| %>
+        <p>
+          <%= category.name %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
+</div>

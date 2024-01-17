@@ -1,0 +1,7 @@
+<div class="mx-auto w-100">
+  <h1 class="font-weight-bold display-4">New category</h1>
+
+  <%= render "form", category: @category %>
+
+  <%= link_to "Back to categories", user_categories_path(@user), class: "ml-2 btn btn-light" %>
+</div>

@@ -1,0 +1,8 @@
+<!-- app/views/expenses/new.html.erb -->
+<div class="mx-auto w-100">
+  <h1 class="font-weight-bold display-4">New expense</h1>
+
+  <%= render "form", expense: @expense %>
+
+  <%= link_to "Back to expenses", user_expenses_path, class: "ml-2 btn btn-light" %>
+</div>

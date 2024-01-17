@@ -1,0 +1,27 @@
+<div class="w-100">
+  <% if notice.present? %>
+    <p class="alert alert-success mb-3" id="notice"><%= notice %></p>
+  <% end %>
+
+  <div class="d-flex justify-content-between align-items-center">
+    <h1 class="font-weight-bold display-4">Categories</h1>
+  </div>
+  <%= @categories.inspect %>
+  <div id="categories" class="w-100">
+  <% @categories.each do |category| %>
+    <% if category.icon_data.present? %>
+      <%= image_tag "data:image/png;base64,#{Base64.encode64(category.icon_data)}" %>
+      <%else%>
+      <%= image_tag 'icon-home.png', class: "home-icon" %>
+    <% end %>
+    <p><%= category.name %></p>
+    <p><%= category.created_at %></p>
+    <% category.expenses.each do |expense| %>
+      <p>
+        <%= expense.name %>: <%= expense.amount %>
+      </p>
+    <% end %>
+  <% end %>
+  </div>
+  <%= link_to "New category", new_user_category_path(current_user), class: "btn btn-primary" %>
+</div>
