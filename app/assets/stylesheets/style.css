@@ -1,4 +1,32 @@
 /* Add this to your CSS file or style tag in the header */
+.navbar-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #3778c3;
+  color: antiquewhite;
+}
+
+#navbarNav{
+  background-color: #3778c3;
+  color: antiquewhite;
+}
+.navbar-list-container {
+  background-color: #3778c3;
+}
+.search-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #3778c3;
+  border: none;
+  color: white;
+}
+
+.image-container {
+  background:#3778c3;
+  border: none;
+}
 .btn-custom {
   width: 90%;
   padding: 30px;
@@ -11,13 +39,42 @@
   display: none;
 }
 
+.most-button {
+  width: 100%;
+  padding: 20px;
+  text-align: right;
+  background-color: #3778c3;
+  }
+  
+  .btn.active {
+    color: rgb(54, 53, 53);
+    background-color: #3778c3;
+    border: none;
+  }
+
 @media (max-width: 576px) {
   .mobile-back-button {
-    display: inline-block;
+    float: left;
+    position: absolute;
+    display: flex;
+    background-color: #3778c3;
+    border: 1px solid #434b54;
+    font-size: 22px;
   }
 
   .navbar-toggler {
-    float: right;
+    float: left;
+  }
+
+  .mostbtn {
+    color: #434b54;
+    background-color: #3778c3;
+    border: none;
+  }
+  .mostbtn.btn.active {
+    color: rgb(245, 242, 242);
+    background-color: #f6f2f2;
+    border: none;
   }
 }
 
@@ -60,7 +117,8 @@ a {
   margin: 0 auto;
   display:flex;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid  #f5f8fb;
+  border-radius: 3px;
   padding: 20px;
   margin-bottom: 10px;
 }
@@ -105,11 +163,16 @@ li{
   flex-direction: column;
   justify-content: center;
 }
-
 .home-icon {
-  margin-right: 10px;
+  margin-left: -10px;
 }
-
+.home-icon-ex {
+  margin-right: -24px;
+}
 .category-amount {
   text-align: right;
+}
+
+.time {
+  padding-top:20px;
 }

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   root to: "home#index"
 
-  resources :users, only: [:index, :new, :create, :destroy, :edit, :update] do
+  resources :users, only: [:index, :new, :create, :show, :destroy, :edit, :update] do
     resources :expenses, only: [:index, :new, :create, :show, :destroy, :edit, :update, :all]
     resources :categories, only: [:index, :new, :create, :show, :destroy, :edit, :update]
   end

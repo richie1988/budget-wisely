@@ -1,8 +1,12 @@
 <!-- app/views/expenses/new.html.erb -->
 <div class="mx-auto w-100">
-  <h1 class="font-weight-bold display-4">New expense</h1>
-
-  <%= render "form", expense: @expense %>
-
+<h1 class="font-weight-bold display-4 text-center">New Expense</h1>
+  <div class="d-flex justify-content-center">
+    <div class="w-120">
+      <%= render "form", expense: @expense %>
+    </div>
+  </div>
+  <div class="d-none justify-content-center">
   <%= link_to "Back to expenses", user_expenses_path, class: "ml-2 btn btn-light" %>
+</div>
 </div>
