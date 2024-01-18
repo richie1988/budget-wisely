@@ -1,9 +1,7 @@
 <!-- app/views/home/index.html.erb -->
-<h1>BUDGET WISELY</h1>
-<p>Track your expenses and income</p>
-
 <% if user_signed_in? %>
   <!-- Content for logged-in users, e.g., dashboard -->
+  <% render "layouts/recentbtn" %>
   <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-secondary" %>
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl">Categories</h1>
@@ -14,6 +12,8 @@
     <%= render @categories %>
   </div>
 <% else %>
+<h1>BUDGET WISELY</h1>
+<p>Track your expenses and income</p>
   <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
   <%= link_to "Login", new_user_session_path, class: "btn btn-secondary" %>
 <% end %>

@@ -8,7 +8,6 @@ class ExpensesController < ApplicationController
     @ancient_expenses = Expense.most_ancient(current_user).includes(:categories)
     @expenses = @recent_expenses + @ancient_expenses
   end
-  
 
   def all(_index)
     @expenses = Expense.all
@@ -23,6 +22,15 @@ class ExpensesController < ApplicationController
     @expense = @user.expenses.new
   end
 
+  def most_recent
+    @expenses = current_user.expenses.order(created_at: :desc)
+    render :index
+  end
+  
+  def most_ancient
+    @expenses = current_user.expenses.order(created_at: :asc)
+    render :index
+  end
   
 
   # GET /expenses/1/edit

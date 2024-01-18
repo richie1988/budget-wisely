@@ -1,16 +1,24 @@
-<!-- app/views/expenses/show.html.erb -->
 <div class="mx-auto w-100 d-flex">
   <div class="mx-auto">
     <% if notice.present? %>
       <p class="alert alert-success mb-3" id="notice"><%= notice %></p>
     <% end %>
 
-    <%= render @expense %>
+    <h1 class="font-weight-bold display-4"><%= @expense.name %>: <%= @expense.amount %></h1>
+    <% if @expense.categories.any? %>
+  <% @expense.categories.each do |category| %>
+    <p>
+      <%= category.name %>
+    </p>
+  <% end %>
+<% else %>
+  <p>No categories for this expense</p>
+<% end %>
 
-    <%= link_to "Edit this expense", edit_expense_path(@expense), class: "mt-2 btn btn-light" %>
+    <%= link_to "Edit this expense", edit_user_expense_path(current_user, @expense), class: "mt-2 btn btn-light" %>
     <div class="d-inline-block ml-2">
-      <%= button_to "Destroy this expense", expense_path(@expense), method: :delete, class: "mt-2 btn btn-light" %>
+      <%= button_to "Destroy this expense", user_expense_path(current_user, @expense), method: :delete, class: "mt-2 btn btn-light" %>
     </div>
-    <%= link_to "Back to expenses", expenses_path, class: "ml-2 btn btn-light" %>
+    <%= link_to "Back to expenses", user_expenses_path(current_user), class: "ml-2 btn btn-light" %>
   </div>
 </div>

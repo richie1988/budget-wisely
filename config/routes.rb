@@ -12,7 +12,13 @@ Rails.application.routes.draw do
     resources :categories, only: [:index, :new, :create, :show, :destroy, :edit, :update]
   end
 
-  resources :expenses, only: [:index, :all]
+  resources :expenses, only: [:index, :all] do
+    collection do
+      get :most_recent
+      get :most_ancient
+    end
+  end
+
   resources :categories, only: [:index, :new, :create, :show, :destroy, :edit, :update]
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
