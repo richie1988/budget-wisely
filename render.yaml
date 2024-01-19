@@ -1,9 +1,7 @@
 databases:
   - name: postgres
-    ipAllowlist: []
     databaseName: budget-app
     user: postgres
-    password: Perento16
     plan: free
 
 services:
