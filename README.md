@@ -58,7 +58,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 [Check out the live demo](https://mysite-nmu0.onrender.com/)
 
-[Video](https://www.loom.com/share/449a75201327438e80cdc014ad3470e6?sid=04bc7353-b236-4664-9bb1-4d0a27a9f062)
+[Video](https://www.loom.com/share/4b139db93a134ff2bb896c47e08cc994?sid=c37226b8-ac28-49cb-822e-70820967e3a1)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
