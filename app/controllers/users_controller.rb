@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       sign_in(@user)
-      redirect_to root_path, notice: 'Successfully signed up.'
+      redirect_to @user, notice: 'Successfully signed up.' # Redirect to @user instead of root_path
     else
       render :new
     end
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: 'User was successfully updated.'
+      redirect_to @user, notice: 'User was successfully updated.' # Redirect to @user after successful update
     else
       render :edit
     end

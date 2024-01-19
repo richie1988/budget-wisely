@@ -1,5 +1,11 @@
-require 'rails_helper'
+# RSpec.describe GroupEntity, type: :model do
+#   it 'belongs to expense' do
+#     group_entity = build(:group_entity, expense: nil)
+#     expect(group_entity).to_not be_valid
+#   end
 
-RSpec.describe GroupEntity, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+#   it 'belongs to category' do
+#     group_entity = build(:group_entity, category: nil)
+#     expect(group_entity).to_not be_valid
+#   end
+# end

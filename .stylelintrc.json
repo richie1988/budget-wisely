@@ -28,5 +28,21 @@
       ],
       "csstree/validator": true
     },
-    "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css"]
+    "ignoreFiles": [
+      "build/**", 
+      "dist/**", 
+      "**/reset*.css", 
+      "**/bootstrap*.css", 
+      "bin/**/*", 
+      "assets/**/*", 
+      "vendor/**/*",
+      "node_modules/**/*",
+      "public/**/*",
+      "storage/**/*",
+      "resources/**/*",
+      "tests/**/*",
+      "webpack.mix.js",
+      "webpack.config.js",
+      "webpack.config.*.js"
+      ]
   }

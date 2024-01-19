@@ -18,14 +18,12 @@
              <p class="time-category"><%= category.created_at.strftime("%d %b %Y %H:%M") %></p>
           </div>
         </div>
-        <% if category.expenses.any? %>
           <div class="category-amount">
             <ul>
-              <p><strong>  expenses: <%= category.expenses.count.presence || 0 %></strong></p>
-              <p><strong>  amount $<%= category.expenses.sum(:amount).presence || 0 %></strong></p>
+              <p><strong>  Expenses: <%= category.expenses.count.presence || 0 %></strong></p>
+              <p><strong>  Amount $<%= category.expenses.sum(:amount).presence || 0 %></strong></p>
             </ul>
           </div>
-        <% end %>
       </section>
         </div>
       <% end %>

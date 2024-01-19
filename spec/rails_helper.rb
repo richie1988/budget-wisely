@@ -34,7 +34,9 @@ RSpec.configure do |config|
   config.fixture_paths = [
     Rails.root.join('spec/fixtures')
   ]
+  config.include FactoryBot::Syntax::Methods
 
+  config.include Devise::Test::ControllerHelpers, type: :controller
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
@@ -54,6 +56,8 @@ RSpec.configure do |config|
   #       # ...
   #     end
   #
+  Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+
   # The different available types are documented in the features, such as in
   # https://rspec.info/features/6-0/rspec-rails
   config.infer_spec_type_from_file_location!
