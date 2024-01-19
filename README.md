@@ -56,7 +56,7 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-[Check out the live demo](https://mysite-nmu0.onrender.com/)
+[Check out the live demo](https://budget-app-8p6a.onrender.com/)
 
 [Video](https://www.loom.com/share/4b139db93a134ff2bb896c47e08cc994?sid=c37226b8-ac28-49cb-822e-70820967e3a1)
 
