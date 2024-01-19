@@ -7,6 +7,7 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
+    - "spec/*"
 
   DisplayCopNames: true
 
@@ -40,7 +41,8 @@ Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
-
+Layout/EndOfLine:
+   Enabled: False
 Layout/HashAlignment:
   EnforcedColonStyle: key
 Layout/ExtraSpacing:

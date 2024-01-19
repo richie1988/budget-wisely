@@ -1,0 +1,32 @@
+<div class="main-container d-flex flex-column justify-content-between min-vh-100">
+<% if notice.present? %>
+  <p class="alert alert-success mb-3" id="notice"><%= notice %></p>
+<% end %>
+<div id="expenses-container">
+<% @expenses.each do |expense| %>
+  <section class="expense-card">
+    <section class="expense-card-two">
+      <% if expense.categories.any? %>
+        <% expense.categories.each do |category| %>
+          <% if category.icon_data.present? %>
+            <%= image_tag "data:image/png;base64,#{Base64.encode64(category.icon_data)}", class:"home-icon" %>
+          <% end %>
+        <% end %>
+      <% else %>
+        <p>No categories for this expense</p>
+      <% end %>
+      <div class="expense-list">
+      <div class="expense-name-time">
+        <li><%= link_to expense.name, user_expense_path(current_user, expense) %></li>
+        <li><strong>$<%= expense.amount %></strong></li>
+        </div>
+        <p><%= expense.created_at.strftime("%d %b %Y")%></p>
+      </div>  
+    </section>
+  </section>
+<% end %>
+</div>
+<div class="Add-button">
+  <%= link_to "New Expense", new_user_expense_path(current_user), class: "btn btn-primary btn-custom text-center" %>
+</div>
+</div>

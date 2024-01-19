@@ -1,0 +1,11 @@
+<div class="mx-auto w-100">
+<h1 class="font-weight-bold display-4 text-center">New Category</h1>
+<div class="d-flex justify-content-center">
+<div class="w-120">
+  <%= render "form", category: @category %>
+</div>
+</div>
+<div class="d-none justify-content-center">
+  <%= link_to "Back to categories", user_categories_path(@user), class: "ml-2 btn btn-light" %>
+  </div>
+</div>

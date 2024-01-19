@@ -1,0 +1,8 @@
+<!-- app/views/expenses/_form.html.erb -->
+<div class="d-flex justify-content-center">
+<% if @user.image.attached? %>
+  <%= image_tag @user.image %>
+<% end %>
+<h1><%= @user.fullname %></h1>
+<p>Email: <%= @user.email %></p>
+</div>

@@ -1,0 +1,264 @@
+/* Add this to your CSS file or style tag in the header */
+/* stylelint-disable */
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-condensed');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Script&display=swap');
+
+.navbar-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #3778c3;
+  color: antiquewhite;
+}
+
+#navbarNav {
+  background-color: #3778c3;
+  color: antiquewhite;
+}
+
+.navbar-list-container {
+  background-color: #3778c3;
+}
+
+.search-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #3778c3;
+  border: none;
+  color: white;
+}
+
+.image-container {
+  background: #3778c3;
+  border: none;
+}
+
+.btn-custom {
+  width: 90%;
+  padding: 30px;
+  border: 2px solid white;
+  text-align: center;
+  background-color: #5fb523;
+}
+
+.mobile-back-button {
+  display: none;
+}
+
+.most-button {
+  width: 100%;
+  padding: 20px;
+  text-align: right;
+  background-color: #3778c3;
+}
+
+.btn.active {
+  color: rgb(54, 53, 53);
+  background-color: #3778c3;
+  border: none;
+}
+
+@media (max-width: 576px) {
+  .mobile-back-button {
+    float: left;
+    position: absolute;
+    display: flex;
+    background-color: #3778c3;
+    border: 1px solid #434b54;
+    font-size: 22px;
+  }
+
+  .navbar-toggler {
+    float: left;
+  }
+
+  .mostbtn {
+    color: #434b54;
+    background-color: #3778c3;
+    border: none;
+  }
+
+  .mostbtn.btn.active {
+    color: rgb(245, 242, 242);
+    background-color: #f6f2f2;
+    border: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .search-icon {
+    display: none;
+  }
+
+  .expense-card-two {
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+    display: flex;
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+.Add-button {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid white;
+  text-align: center;
+  background-color: #5fb523;
+  position: fixed;
+  bottom: 0;
+}
+
+.Add-button a {
+  font-size: large;
+  font-weight: 700;
+}
+
+.home-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  margin-left: -10px;
+}
+
+.main-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#expenses-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.expense-card,
+.category-card {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  border: 1px solid  #f5f8fb;
+  border-radius: 3px;
+  padding: 20px;
+}
+
+.expense-card-two {
+  width: 100%;
+  height: auto;
+  list-style-type: none;
+  display: flex;
+}
+
+.expense-list {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.expense-list p {
+  margin-top: 3px;
+  padding-left: 0;
+  text-align: start;
+}
+
+.expense-name-time {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.expense-name-time a {
+  font-weight: bold;
+  color: #434b54;
+}
+
+.category-card-two {
+  width: 100%;
+  height: auto;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name-category a {
+  font-weight: bold;
+  color: #434b54;
+}
+
+.time-category {
+  margin-top: 19px;
+  margin-left: -0.2rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+#form-container {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.category-info {
+  display: flex;
+  align-items: center;
+}
+
+.category-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-icon-ex {
+  margin-right: -24px;
+}
+
+.category-amount {
+  text-align: right;
+}
+
+.container {
+  height: 75vh;
+}
+
+.w-90 {
+  width: 100% !important;
+  color: white;
+  background-color: #3778c3;
+  margin-top: 10px;
+}
+
+.w-90:hover {
+  color: white;
+  background-color: #434b54;
+}
+
+.active-blue:focus,
+.active-blue:active {
+  color: rgb(240, 242, 243) !important;
+  background-color: #434b54 !important;
+}
+
+.name-title {
+  text-align: center;
+  font-family: 'Nova Script', system-ui;
+}

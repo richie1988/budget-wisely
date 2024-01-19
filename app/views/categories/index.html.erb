@@ -1,0 +1,35 @@
+<div class="main-container">
+  <% if notice.present? %>
+    <p class="alert alert-success mb-3" id="notice"><%= notice %></p>
+  <% end %>
+  <div class="d-flex justify-content-between align-items-center">
+    <div id="categories-container" class="w-100">
+      <% @categories.each do |category| %>
+        <div class="category-card">
+        <section class="category-card-two">
+        <div class="category-info">
+          <% if category.icon_data.present? %>
+            <%= image_tag "data:image/png;base64,#{Base64.encode64(category.icon_data)}", class:"home-icon" %>
+          <%else%>
+            <%= image_tag 'icon-home.png', class: "home-icon" %>
+          <% end %>
+          <div class="category-details">
+            <li class="name-category"><%= link_to category.name, category_path(category) %></li>
+             <p class="time-category"><%= category.created_at.strftime("%d %b %Y %H:%M") %></p>
+          </div>
+        </div>
+          <div class="category-amount">
+            <ul>
+              <p><strong>  Expenses: <%= category.expenses.count.presence || 0 %></strong></p>
+              <p><strong>  Amount $<%= category.expenses.sum(:amount).presence || 0 %></strong></p>
+            </ul>
+          </div>
+      </section>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="Add-button">
+    <%= link_to "New Category", new_user_expense_path(current_user), class: "btn btn-primary btn-custom text-center" %>
+</div>

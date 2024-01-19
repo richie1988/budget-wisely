@@ -1,0 +1,31 @@
+<%= form_with(model: [current_user, @expense], url: user_expenses_path(current_user), class: "contents") do |form| %>
+  <% if @expense.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger mt-3">
+      <h2><%= pluralize(@expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
+      <ul>
+        <% @expense.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mt-3">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control mt-2" %>
+  </div>
+
+  <div class="mt-3">
+    <%= form.label :amount %>
+    <%= form.text_field :amount, class: "form-control mt-2", placeholder: "$ Enter amount" %>
+  </div>
+
+  <div class="mt-3">
+    <%= form.label :category_ids, "Categories" %>
+    <%= form.collection_check_boxes :category_ids, Category.all, :id, :name %>
+  </div>
+  
+  <div class="mt-3">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
