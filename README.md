@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="person.png" alt="logo" width="140"  height="auto" />
+  <img src="./app/assets/images/icon-person.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Budget Wisely</b></h3>
@@ -53,7 +53,6 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
-
 ## 🚀 Live Demo <a name="live-demo"></a>
 [Check out the live demo](https://budget-app-8p6a.onrender.com/)
 
@@ -73,7 +72,6 @@ In order to run this project you need:
 ```sh
  sudo apt install postgresql postgresql-contrib
 ```
-
 ### Setup
 
 Clone this repository to your desired folder:
@@ -85,7 +83,6 @@ Clone this repository to your desired folder:
 ### Install
 
 Install this project with:
-
 
 ### Usage
 
@@ -99,7 +96,6 @@ To run tests, run the following command:
 ``` sh
   rails s
 ```
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
