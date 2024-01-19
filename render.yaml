@@ -9,7 +9,7 @@ services:
     name: budget-app
     runtime: ruby
     plan: free
-    buildCommand: "./bin/render-build.sh"
+    buildCommand: "chmod +x bin/rails && ./bin/render-build.sh"
     # preDeployCommand: "./bin/rails db:migrate" # preDeployCommand only available on paid instance types
     startCommand: "./bin/rails server"
     envVars:
