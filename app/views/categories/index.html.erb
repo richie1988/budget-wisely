@@ -15,7 +15,7 @@
           <% end %>
           <div class="category-details">
             <li class="name-category"><%= link_to category.name, category_path(category) %></li>
-             <p class="time"><%= category.created_at.strftime("%d %b %Y %H:%M") %></p>
+             <p class="time-category"><%= category.created_at.strftime("%d %b %Y %H:%M") %></p>
           </div>
         </div>
         <% if category.expenses.any? %>
@@ -33,5 +33,5 @@
   </div>
 </div>
 <div class="Add-button">
-    <%= link_to "New expense", new_user_expense_path(current_user), class: "btn btn-primary btn-custom text-center" %>
+    <%= link_to "New Category", new_user_expense_path(current_user), class: "btn btn-primary btn-custom text-center" %>
 </div>

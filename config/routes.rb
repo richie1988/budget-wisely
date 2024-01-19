@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  root to: "home#index"
+  root to: "pages#splash"
 
   resources :users, only: [:index, :new, :create, :show, :destroy, :edit, :update] do
     resources :expenses, only: [:index, :new, :create, :show, :destroy, :edit, :update, :all]

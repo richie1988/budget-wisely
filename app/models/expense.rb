@@ -9,21 +9,21 @@ class Expense < ApplicationRecord
 
   def self.most_recent(user, limit = nil)
     limit ||= user.expenses.count
-    where(user: user).order(created_at: :desc).limit(limit)
+    where(user:).order(created_at: :desc).limit(limit)
   end
 
   def self.most_ancient(user, limit = nil)
     limit ||= user.expenses.count
-    where(user: user).order(created_at: :asc).limit(limit)
+    where(user:).order(created_at: :asc).limit(limit)
   end
 
   def self.expenses_by_user(user)
-    where(user: user).order(created_at: :desc)
+    where(user:).order(created_at: :desc)
   end
 
   private
 
   def must_have_at_least_one_category
-    errors.add(:categories, "must have at least one category") if group_entities.empty?
+    errors.add(:categories, 'must have at least one category') if group_entities.empty?
   end
 end

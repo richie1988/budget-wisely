@@ -16,6 +16,6 @@ class User < ApplicationRecord
 
   # Password validation
   validates :password, presence: true, length: { minimum: 8 },
-                       format: { with: /\A(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\\/-]).*\z/,
+                       format: { with: %r{\A(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).*\z},
                                  message: 'must contain at least one letter, one number, and one special character' }
 end

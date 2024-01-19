@@ -11,7 +11,7 @@ class Category < ApplicationRecord
   before_validation :set_default_icon
 
   def self.descending_order_for_user(user)
-    where(user: user).order(created_at: :desc)
+    where(user:).order(created_at: :desc)
   end
 
   private
