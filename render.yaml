@@ -1,7 +1,7 @@
 databases:
   - name: postgres
-    databaseName: budget-app
-    user: postgres
+    databaseName: budget_app # Use underscore instead of hyphen
+    user: postgres_user # Use a valid username
     plan: free
 
 services:
