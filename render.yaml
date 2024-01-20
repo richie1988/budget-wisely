@@ -1,12 +1,12 @@
 databases:
   - name: postgres
-    databaseName: budget_app # Use underscore instead of hyphen
-    user: postgres_user # Use a valid username
+    databaseName: budget_app
+    user: postgres_user
     plan: free
 
 services:
   - type: web
-    name: budget-app
+    name: budget-wisely
     runtime: ruby
     plan: free
     buildCommand: "chmod +x bin/rails && ./bin/render-build.sh"
