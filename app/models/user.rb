@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :categories, through: :expenses
   has_many :group_entities, through: :expenses
 
+  has_one_attached :image
+
   # Custom validations
   validates :name, presence: true, length: { maximum: 255 }
   validates :email, presence: true, uniqueness: { case_sensitive: false }, length: { maximum: 255 },
@@ -17,5 +19,12 @@ class User < ApplicationRecord
   # Password validation
   validates :password, presence: true, length: { minimum: 8 },
                        format: { with: %r{\A(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).*\z},
-                                 message: 'must contain at least one letter, one number, and one special character' }
+                                 message: 'must contain at least one letter, one number, and one special character' },
+                       if: :password_required?
+
+  private
+
+  def password_required?
+    new_record? || password.present? || password_confirmation.present?
+  end
 end

@@ -1,4 +1,19 @@
 # app/views/users/new.html.erb
+<div class="d-flex justify-content-center">
 <%= form_for @user do |f| %>
-    <!-- Your form fields here -->
-  <% end %>
+  <!-- ... other fields ... -->
+  <p>
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  </p>
+  <p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  </p>
+  <p>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  </p>
+  <%= f.submit %>
+<% end %>
+</div>
