@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="./app/assets/images/icon-person.png" alt="logo" width="140"  height="auto" />
+  <img src="./app/assets/images/icons8-person-48.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Budget Wisely</b></h3>
