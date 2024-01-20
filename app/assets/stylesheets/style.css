@@ -7,7 +7,7 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 10px;
+  padding: 10px 30px;
   background-color: #3778c3;
   color: antiquewhite;
 }
@@ -103,12 +103,7 @@
     display: flex;
     justify-content: flex-end;
   }
-  .logout-container {
-    display: flex;
-    justify-content: flex-end;
-    padding: 0px 50px;
-  
-  }
+ 
   #logout-btn {
     color: antiquewhite;
     border: 4px solid antiquewhite;
@@ -118,6 +113,7 @@
     font-size: 16px;
     font-weight: 700;
     color: #f0f6ec;
+    margin-right: 10px;
   }
 
   #dropdown-text a:hover {
@@ -292,4 +288,30 @@ li {
 .name-title {
   text-align: center;
   font-family: 'Nova Script', system-ui;
+}
+
+/* profile page */
+.profile-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100px;
+  background: #949393;
+}
+
+.image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-placeholder img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #434b54;
 }
