@@ -10,17 +10,19 @@
 <% end %>
 <div class="navbar-brand mx-auto" style="color: white;">
 <% if user_signed_in? %>
+ <div class="text-center">
   <% if current_page?(user_expenses_path(current_user)) || current_page?(most_recent_expenses_path) || current_page?(most_ancient_expenses_path) %>
-    Expenses
+    <p>EXPENSES</p>
   <% elsif current_page?(new_user_expense_path(current_user)) %>
-    New Expense
+    <p>NEW EXPENSE</p>
   <% elsif current_page?(user_categories_path(current_user)) %>
-    Categories
+    <p>CATEGORIES</p>
   <% elsif current_page?(new_user_category_path(current_user)) %>
-    New Category
+    <p>NEW CATEGORY</p>
   <% else %>
     <!-- Add more conditions here for other pages -->
   <% end %>
+</div>
 <% end %>
 </div>
 <% if user_signed_in? && current_page?(new_user_expense_path(current_user)) %>
@@ -36,29 +38,45 @@
 </div>
 <% end %>
     <div class="collapse navbar-collapse" id="navbarNav" style="background-color: #3778c3; color: white;">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav nav-links-container">
         <% if user_signed_in? %>
         <li class="nav-item">
-        <%= link_to "Profile", user_path(current_user) , class: "nav-link", style: "color: white;" %>
-         </li>
+        <%= link_to "PROFILE", user_path(current_user) , class: "nav-link", style: "color: white;" %>
+        </li>
           <!-- Add additional links for logged-in users here -->
-          <li class="nav-item">
-            <%= link_to "Categories", user_categories_path(current_user), class: "nav-link", style: "color: white;" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "New Categories", new_user_category_path(current_user), class: "nav-link", style: "color: white;" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Expenses", user_expenses_path(current_user), class: "nav-link", style: "color: white;" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "New Expenses", new_user_expense_path(current_user), class: "nav-link", style: "color: white;" %>
-          </li>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-secondary", data: { confirm: "Are you sure you want to log out?" }, style: "color: white;" %>
+      <li class="nav-item dropdown ml-auto" id="dropdown-text">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        CATEGORIES
+      </a>
+      <ul class="dropdown-menu">
+        <li class="nav-item">
+          <%= link_to "Categories", user_categories_path(current_user), class: "nav-link", style: "color: grey;" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "New Category", new_user_category_path(current_user), class: "nav-link", style: "color: grey;" %>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown" id="dropdown-text">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        EXPENSES
+      </a>
+      <ul class="dropdown-menu">
+        <li class="nav-item">
+          <%= link_to "Expenses", user_expenses_path(current_user), class: "nav-link", style: "color: grey;" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "New Expense", new_user_expense_path(current_user), class: "nav-link", style: "color: grey;" %>
+        </li>
+        </ul>
+      </li>
+          <div class="logout-container">
+          <ul class="navbar-nav" id="logout-container">
+            <li class="nav-item" id="logout-btn">
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-secondary", data: { confirm: "Are you sure you want to log out?" }, style: "color: white; border: 4px solid  antiquewhite" %>
             </li>
           </ul>
+          </div>
         <% else %>
           <li class="nav-item">
           <%= link_to "Home", root_path, class: "nav-link active d-none d-lg-block", "aria-current": "page", style: "color: white; background-color: #3778c3;" %>

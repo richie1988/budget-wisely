@@ -97,6 +97,37 @@
     list-style-type: none;
     display: flex;
   }
+
+  .nav-links-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .logout-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 50px;
+  
+  }
+  #logout-btn {
+    color: antiquewhite;
+    border: 4px solid antiquewhite;
+  }
+
+  #dropdown-text a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #f0f6ec;
+  }
+
+  #dropdown-text a:hover {
+    color: #68d61f;
+  }
+  .mostbtn {
+    color: #edf1f5;
+    background-color: #3778c3;
+    border: 1px solid #434b54;
+  }
 }
 
 a {
