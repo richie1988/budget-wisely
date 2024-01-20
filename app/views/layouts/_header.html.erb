@@ -44,7 +44,9 @@
         <% if user_signed_in? %>
         <li class="nav-item" id="image-profile">
         <%= link_to user_path(current_user), class: "nav-link" do %>
-          <%= image_tag(current_user.image, alt: "Profile Image", style: "width: 50px; height: 50px; border: 2px solid #434b54; border-radius: 50%; margin-bottom:10px;") if current_user.image.present? %>
+          <% if current_user.image.present? %>
+            <%= image_tag "data:image/png;base64,#{Base64.encode64(current_user.image)}", alt: "Profile Image", style: "width: 50px; height: 50px; border: 2px solid #434b54; border-radius: 50%; margin-bottom:10px;" %>
+          <% end %>
         <% end %>
       </li>
           <!-- Add additional links for logged-in users here -->
