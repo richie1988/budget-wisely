@@ -1,8 +1,26 @@
-<!-- app/views/expenses/_form.html.erb -->
-<div class="d-flex justify-content-center">
-<% if @user.image.attached? %>
-  <%= image_tag @user.image %>
-<% end %>
-<h1><%= @user.fullname %></h1>
-<p>Email: <%= @user.email %></p>
+<!-- app/views/users/show.html.erb -->
+<div class="d-flex justify-content-center profile-container">
+  <div class="card text-center" style="width: 18rem;">
+    <div class="image-placeholder">
+      <% if @user.image.attached? %>
+        <%= link_to edit_user_path(@user) do %>
+          <%= image_tag @user.image, class: "mx-auto d-block" %>
+        <% end %>
+      <% else %>
+        <%= link_to edit_user_path(@user) do %>
+          <%= image_tag 'icon-person.png', class: "mx-auto d-block" %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= link_to edit_user_path(@user) do %>
+          <%= @user.name %>
+        <% end %>
+      </h5>
+      <%= link_to edit_user_registration_path do %>
+        <p class="card-text">Email: <%= @user.email %></p>
+      <% end %>
+    </div>
+  </div>
 </div>
